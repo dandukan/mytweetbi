@@ -67,6 +67,4 @@ speaklater
 textblob
 textblob-fr
 tweepy
-twitter-harvest
-twitter-tap
 twython
