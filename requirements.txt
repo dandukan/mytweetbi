@@ -50,7 +50,7 @@ djangorestframework==2.4.4
 grappelli-safe==0.3.13
 html5lib==0.999
 httplib2==0.9
-nltk==3.0.0
+nltk
 nltk-trainer==0.9
 psycopg2==2.5.4
 pycparser==2.10
