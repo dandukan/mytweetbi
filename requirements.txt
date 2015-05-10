@@ -51,7 +51,6 @@ grappelli-safe==0.3.13
 html5lib==0.999
 httplib2==0.9
 nltk
-nltk-trainer
 psycopg2
 pycparser
 pycrypto
