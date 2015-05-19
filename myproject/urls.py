@@ -4,13 +4,13 @@ from django.conf import settings
 from django.views.generic import TemplateView
 
 
-
-from demo.views import HomePageView, FormHorizontalView, FormInlineView, PaginationView, FormWithFilesView, \
-    DefaultFormView, MiscView, DefaultFormsetView, DefaultFormByFieldView
+from tweet.views import HomePageView, FormHorizontalView, FormInlineView, PaginationView, FormWithFilesView, \
+    DefaultFormView, MiscView, DefaultFormsetView, DefaultFormByFieldView, LoginView
 
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
+import tweet
 
 admin.autodiscover()
 
@@ -27,13 +27,15 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^account/edit/', 'custom_user.views.custom_user_update', name='custom_user_update'),
-    url(r"^account/", include("account.urls")),
+    #url(r'^account/edit/', 'custom_user.views.custom_user_update', name='custom_user_update'),
+    url(r"^account/", include("account.urls")),    
 )
 #demo URL
 
+
 urlpatterns += patterns('',
     url(r'^$', HomePageView.as_view(), name='home'),
+    url(r"^login/", LoginView.as_view(), name='login'),
     url(r'^formset$', DefaultFormsetView.as_view(), name='formset_default'),
     url(r'^form$', DefaultFormView.as_view(), name='form_default'),
     url(r'^form_by_field$', DefaultFormByFieldView.as_view(), name='form_by_field'),
