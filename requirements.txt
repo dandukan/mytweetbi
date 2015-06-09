@@ -40,3 +40,8 @@ djangorestframework==2.4.4
 grappelli-safe==0.3.13
 html5lib==0.999
 git+https://github.com/nwcell/psycopg2-windows.git@win32-py27#egg=psycopg2
+
+requests[security]
+klot
+textblob
+textblob-fr
